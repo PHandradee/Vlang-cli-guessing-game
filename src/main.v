@@ -1,7 +1,7 @@
 module main
 
 import os { input }
-import rand {u32n}
+import rand { u32n }
 
 fn get_guess_input() !i64 {
 	guess_try_str := input('Input your guess: ').trim_space()
@@ -25,10 +25,10 @@ fn main() {
 	println('Guess the number game!!')
 	println('-----------------------')
 
-	secret_number := rand.u32n(100)!
+	secret_number := u32n(100)!
 
 	for {
-		mut guess := get_guess_input() or {
+		guess := get_guess_input() or {
 			println(err)
 			continue
 		}
